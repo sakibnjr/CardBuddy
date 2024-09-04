@@ -14,15 +14,112 @@
       <div
         class="container w-4/5 mx-auto px-4 py-3 flex justify-between items-center"
       >
+        <!-- Logo -->
         <a href="/" class="text-2xl font-bold text-blue-600">CardBuddy</a>
-        <div class="space-x-4">
-          <a href="/" class="btn btn-link">Home</a>
-          <a href="#how-it-works" class="btn btn-link">How It Works</a>
-          <a href="#pricing" class="btn btn-link">Pricing</a>
-          <a href="#faq" class="btn btn-link">FAQ</a>
-          <a href="#contact" class="btn btn-link">Contact Us</a>
-          <a href="/login" class="btn btn-primary">Login</a>
-          <a href="/register" class="btn btn-secondary">Register</a>
+
+        <!-- Mobile menu button -->
+        <button
+          class="block md:hidden text-blue-600 focus:outline-none"
+          id="navbar-toggle"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Links -->
+        <div class="hidden md:flex space-x-4" id="navbar-menu">
+          <a href="/" class="btn btn-link hover:text-blue-800">Home</a>
+          <a href="#how-it-works" class="btn btn-link hover:text-blue-800"
+            >How It Works</a
+          >
+          <a href="#pricing" class="btn btn-link hover:text-blue-800"
+            >Pricing</a
+          >
+          <a href="#faq" class="btn btn-link hover:text-blue-800">FAQ</a>
+          <a href="#contact" class="btn btn-link hover:text-blue-800"
+            >Contact Us</a
+          >
+          <a href="/login" class="btn btn-primary hover:bg-blue-700">Login</a>
+          <a href="/register" class="btn btn-secondary hover:bg-gray-700"
+            >Register</a
+          >
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        class="hidden md:hidden fixed inset-0 flex flex-col items-center justify-center bg-white shadow-md"
+        id="navbar-menu-mobile"
+      >
+        <!-- Close Button -->
+        <button
+          class="absolute top-4 right-4 text-blue-600 focus:outline-none"
+          id="navbar-close"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+
+        <div class="text-center space-y-4 w-4/5">
+          <a
+            href="/"
+            class="block text-blue-600 text-xl hover:text-white hover:bg-blue-400 hover:rounded-md hover:p-2"
+            >Home</a
+          >
+          <a
+            href="#how-it-works"
+            class="block text-blue-600 text-xl hover:text-white hover:bg-blue-400 hover:rounded-md hover:p-2"
+            >How It Works</a
+          >
+          <a
+            href="#pricing"
+            class="block text-blue-600 text-xl hover:text-white hover:bg-blue-400 hover:rounded-md hover:p-2"
+            >Pricing</a
+          >
+          <a
+            href="#faq"
+            class="block text-blue-600 text-xl hover:text-white hover:bg-blue-400 hover:rounded-md hover:p-2"
+            >FAQ</a
+          >
+          <a
+            href="#contact"
+            class="block text-blue-600 text-xl hover:text-white hover:bg-blue-400 hover:rounded-md hover:p-2"
+            >Contact Us</a
+          >
+          <a
+            href="/login"
+            class="block text-blue-600 text-xl hover:text-white hover:bg-blue-400 hover:rounded-md hover:p-2"
+            >Login</a
+          >
+          <a
+            href="/register"
+            class="block text-blue-600 text-xl hover:text-white hover:bg-blue-400 hover:rounded-md hover:p-2"
+            >Register</a
+          >
         </div>
       </div>
     </nav>
@@ -32,7 +129,8 @@
       <div
         class="container w-4/5 mx-auto flex flex-col lg:flex-row items-center justify-between px-4 py-10 lg:py-20"
       >
-        <div class="lg:w-1/2">
+        <!-- Text Section -->
+        <div class="lg:w-1/2 lg:text-left">
           <h1 class="text-4xl font-bold text-blue-800 leading-tight mb-6">
             Get Your Virtual Card Instantly with Easy Top-Ups!
           </h1>
@@ -42,18 +140,22 @@
             Bangladesh. Enjoy secure, fast, and convenient online payments
             anytime, anywhere.
           </p>
-          <div class="flex space-x-4">
+          <div
+            class="flex flex-col lg:flex-row justify-center lg:justify-start space-y-4 lg:space-y-0 lg:space-x-4"
+          >
             <a href="/register" class="btn btn-primary btn-lg">Get Started</a>
             <a href="#how-it-works" class="btn btn-secondary btn-lg"
               >Learn More</a
             >
           </div>
         </div>
-        <div class="lg:w-1/2 mt-10 lg:mt-0">
+
+        <!-- Image Section -->
+        <div class="lg:w-1/2 mt-10 lg:mt-0 flex justify-center">
           <img
             src="./svg/credit_card.svg"
             alt="Virtual Card Image"
-            class="rounded-lg mx-auto animate-fade-in p-10"
+            class="rounded-lg max-w-full animate-fade-in p-10"
           />
         </div>
       </div>
@@ -66,7 +168,7 @@
           How It Works
         </h2>
         <div
-          class="flex flex-col lg:flex-row justify-around items-center space-y-8 lg:space-y-0"
+          class="flex flex-col lg:flex-row gap-10 justify-around items-center space-y-8 lg:space-y-0"
         >
           <div
             class="card w-96 bg-blue-50 shadow-md hover:shadow-lg transition-shadow duration-300"
@@ -199,13 +301,23 @@
       <div
         class="container w-4/5 mx-auto px-4 flex flex-col lg:flex-row justify-between items-center"
       >
-        <p class="text-center lg:text-left">
+        <!-- Footer Text -->
+        <p class="text-center lg:text-left mb-4 lg:mb-0">
           © 2024 CardBuddy. All rights reserved.
         </p>
-        <div class="flex space-x-4 mt-4 lg:mt-0">
-          <a href="#" class="btn btn-link text-white">Privacy Policy</a>
-          <a href="#" class="btn btn-link text-white">Terms of Service</a>
-          <a href="#" class="btn btn-link text-white">Contact Us</a>
+        <!-- Footer Links -->
+        <div
+          class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4 text-center lg:text-left"
+        >
+          <a href="#" class="btn btn-link text-white hover:text-gray-300"
+            >Privacy Policy</a
+          >
+          <a href="#" class="btn btn-link text-white hover:text-gray-300"
+            >Terms of Service</a
+          >
+          <a href="#" class="btn btn-link text-white hover:text-gray-300"
+            >Contact Us</a
+          >
         </div>
       </div>
     </footer>
@@ -213,5 +325,23 @@
     <!-- Include Tailwind and DaisyUI Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.js"></script>
+
+    <script>
+      // Toggle mobile menu visibility
+      document
+        .getElementById("navbar-toggle")
+        .addEventListener("click", function () {
+          var menu = document.getElementById("navbar-menu-mobile");
+          menu.classList.toggle("hidden");
+        });
+
+      // Close mobile menu
+      document
+        .getElementById("navbar-close")
+        .addEventListener("click", function () {
+          var menu = document.getElementById("navbar-menu-mobile");
+          menu.classList.add("hidden");
+        });
+    </script>
   </body>
 </html>
